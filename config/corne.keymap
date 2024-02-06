@@ -32,38 +32,26 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
 / {
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <2 1>;
-        };
-
         tab {
             bindings = <&kp TAB>;
-            key-positions = <3 2>;
+            key-positions = <15 14>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 8>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <7 8>;
-        };
-
-        del {
-            bindings = <&kp DEL>;
-            key-positions = <10 9>;
-        };
-
-        ctrl {
-            bindings = <&kp LCTRL>;
-            key-positions = <25 13>;
+            key-positions = <20 21>;
         };
 
         grave {
@@ -74,6 +62,11 @@
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <26 27>;
+        };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <26 28>;
         };
 
         paste {
@@ -96,9 +89,74 @@
             key-positions = <25 26 27>;
         };
 
-        rctrl {
-            bindings = <&kp RCTRL>;
-            key-positions = <34 22>;
+        lh-gui {
+            bindings = <&kp LGUI>;
+            key-positions = <16 15>;
+        };
+
+        lh-alt {
+            bindings = <&kp LALT>;
+            key-positions = <16 14>;
+        };
+
+        lh-ctrl {
+            bindings = <&kp LCTRL>;
+            key-positions = <16 13>;
+        };
+
+        lh-gui-alt {
+            bindings = <&kp LG(LALT)>;
+            key-positions = <16 15 14>;
+        };
+
+        lh-gui-ctrl {
+            bindings = <&kp LG(LCTRL)>;
+            key-positions = <16 15 13>;
+        };
+
+        lh-alt-ctrl {
+            bindings = <&kp LA(LCTRL)>;
+            key-positions = <16 14 13>;
+        };
+
+        lh-gui-alt-ctrl {
+            bindings = <&kp LG(LA(LCTRL))>;
+            key-positions = <16 15 14 13>;
+        };
+
+        rh-gui {
+            bindings = <&kp LGUI>;
+            key-positions = <19 20>;
+        };
+
+        rh-alt {
+            bindings = <&kp LALT>;
+            key-positions = <19 21>;
+        };
+
+        rh-ctrl {
+            bindings = <&kp LCTRL>;
+            key-positions = <19 22>;
+        };
+
+        rh-gui-alt {
+            bindings = <&kp LG(LALT)>;
+            key-positions = <19 20 21>;
+        };
+
+        rh-gui-ctrl {
+            bindings = <&kp LG(LCTRL)>;
+            key-positions = <19 20 22>;
+        };
+
+        rh-alt-ctrl {
+            bindings = <&kp LA(LCTRL)>;
+            key-positions = <19 21 22>;
+        };
+
+        rh-gui-alt-ctrl {
+            bindings = <&kp LG(LA(LCTRL))>;
+            key-positions = <19 20 21 22>;
         };
     };
 
@@ -159,10 +217,10 @@
 
         base {
             bindings = <
-&none  &kp Q  &kp W  &kp F     &kp P      &kp B        &kp J  &kp L  &kp U      &kp Y    &kp SEMI  &none
-&none  &kp A  &kp R  &kp S     &kp T      &kp G        &kp M  &kp N  &kp E      &kp I    &kp O     &none
-&none  &kp Z  &kp X  &kp C     &kp D      &kp V        &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &kp LGUI  &kp SPACE  &kp LSHFT    &mo 2  &mo 1  &kp RALT
+&none  &kp Q  &kp W  &kp F    &kp P      &kp B        &kp J  &kp L  &kp U      &kp Y    &kp SEMI  &none
+&none  &kp A  &kp R  &kp S    &kp T      &kp G        &kp M  &kp N  &kp E      &kp I    &kp O     &none
+&none  &kp Z  &kp X  &kp C    &kp D      &kp V        &kp K  &kp H  &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &kp ESC  &kp SPACE  &kp LSHFT    &mo 2  &mo 1  &kp ENTER
             >;
         };
 
@@ -185,3 +243,4 @@
         };
     };
 };
+
