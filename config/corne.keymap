@@ -6,16 +6,6 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <15 14>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
-        };
-
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <13 2>;
