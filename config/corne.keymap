@@ -6,11 +6,6 @@
     combos {
         compatible = "zmk,combos";
 
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <13 2>;
-        };
-
         copy {
             bindings = <&kp LG(C)>;
             key-positions = <26 27>;
@@ -156,8 +151,8 @@
             key-positions = <9 21>;
         };
 
-        sqt {
-            bindings = <&kp SQT>;
+        grave {
+            bindings = <&kp GRAVE>;
             key-positions = <14 26>;
         };
 
@@ -171,28 +166,18 @@
             key-positions = <16 28>;
         };
 
-        tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <17 29>;
-        };
-
-        under {
-            bindings = <&kp UNDER>;
-            key-positions = <18 30>;
-        };
-
         minus {
             bindings = <&kp MINUS>;
             key-positions = <19 31>;
         };
 
-        excl {
-            bindings = <&kp EXCLAMATION>;
+        slash {
+            bindings = <&kp SLASH>;
             key-positions = <20 32>;
         };
 
-        pipe {
-            bindings = <&kp SLASH>;
+        excl {
+            bindings = <&kp EXCLAMATION>;
             key-positions = <21 33>;
         };
 
