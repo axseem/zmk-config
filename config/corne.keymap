@@ -16,9 +16,19 @@
             key-positions = <27 28>;
         };
 
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <25 26>;
+        };
+
+        redo {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <25 26 27>;
+        };
+
         lh-gui {
             bindings = <&kp LGUI>;
-            key-positions = <15 15>;
+            key-positions = <15 16>;
         };
 
         lh-alt {
