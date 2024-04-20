@@ -16,6 +16,11 @@
             key-positions = <27 28>;
         };
 
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <26 28>;
+        };
+
         undo {
             bindings = <&kp LG(Z)>;
             key-positions = <25 26>;
