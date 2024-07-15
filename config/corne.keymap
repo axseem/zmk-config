@@ -32,7 +32,7 @@
         };
 
         lh-gui {
-            bindings = <&kp LGUI>;
+            bindings = <&kp LCTRL>;
             key-positions = <15 16>;
         };
 
@@ -42,12 +42,12 @@
         };
 
         lh-ctrl {
-            bindings = <&kp LCTRL>;
+            bindings = <&kp LGUI>;
             key-positions = <13 14>;
         };
 
         rh-gui {
-            bindings = <&kp LGUI>;
+            bindings = <&kp LCTRL>;
             key-positions = <19 20>;
         };
 
@@ -57,7 +57,7 @@
         };
 
         rh-ctrl {
-            bindings = <&kp LCTRL>;
+            bindings = <&kp LGUI>;
             key-positions = <21 22>;
         };
 
@@ -297,7 +297,7 @@
         fun {
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8  &kp F9  &bt2      &none   &kp GLOBE  &kp CAPS   &kp INS    &kp PSCRN  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &bt1      &none   &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &bt1      &none   &sk LCTRL  &sk LALT   &sk LGUI   &sk LSHFT  &trans
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &bt0      &none   &kp HOME   &kp PG_UP  &kp PG_DN  &kp END    &trans
                          &trans  &trans  &trans    &trans  &trans     &trans
             >;
