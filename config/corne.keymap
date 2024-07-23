@@ -63,12 +63,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
         };
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
         };
 
         enter {
