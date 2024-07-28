@@ -7,58 +7,58 @@
         compatible = "zmk,combos";
 
         copy {
-            bindings = <&kp LC(C)>;
+            bindings = <&kp LG(C)>;
             key-positions = <26 27>;
         };
 
         paste {
-            bindings = <&kp LC(V)>;
+            bindings = <&kp LG(V)>;
             key-positions = <27 28>;
         };
 
         cut {
-            bindings = <&kp LC(X)>;
+            bindings = <&kp LG(X)>;
             key-positions = <26 28>;
         };
 
         undo {
-            bindings = <&kp LC(Z)>;
+            bindings = <&kp LG(Z)>;
             key-positions = <25 26>;
         };
 
         redo {
-            bindings = <&kp LS(LC(Z))>;
+            bindings = <&kp LG(LS(Z))>;
             key-positions = <25 27>;
         };
 
         lh-gui {
             bindings = <&kp LCTRL>;
-            key-positions = <15 16>;
+            key-positions = <13 14>;
         };
 
         lh-alt {
             bindings = <&kp LGUI>;
-            key-positions = <14 15>;
+            key-positions = <15 16>;
         };
 
         lh-ctrl {
             bindings = <&kp LALT>;
-            key-positions = <13 14>;
+            key-positions = <14 15>;
         };
 
         rh-gui {
             bindings = <&kp LCTRL>;
-            key-positions = <19 20>;
+            key-positions = <21 22>;
         };
 
         rh-alt {
             bindings = <&kp LGUI>;
-            key-positions = <20 21>;
+            key-positions = <19 20>;
         };
 
         rh-ctrl {
             bindings = <&kp LALT>;
-            key-positions = <21 22>;
+            key-positions = <20 21>;
         };
 
         tab {
