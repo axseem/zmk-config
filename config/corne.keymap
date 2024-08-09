@@ -278,10 +278,10 @@
 
         base {
             bindings = <
-&trans  &kp B  &kp L  &kp D      &kp C      &kp V     &kp J   &kp F  &kp O      &kp U    &kp SEMI  &trans
-&trans  &kp N  &kp R  &kp T      &kp S      &kp G     &kp Y   &kp H  &kp A      &kp E    &kp I     &trans
-&trans  &kp X  &kp Q  &kp M      &kp W      &kp Z     &kp K   &kp P  &kp COMMA  &kp DOT  &kp SQT   &trans
-                      &kp LSHFT  &kp SPACE  &trans    &trans  &mo 1  &mo 2
+&trans  &kp B  &kp L  &kp D      &kp C      &kp V     &kp J  &kp F  &kp O      &kp U    &kp SEMI  &trans
+&trans  &kp N  &kp R  &kp T      &kp S      &kp G     &kp Y  &kp H  &kp A      &kp E    &kp I     &trans
+&trans  &kp X  &kp Q  &kp M      &kp W      &kp Z     &kp K  &kp P  &kp COMMA  &kp DOT  &kp SQT   &trans
+                      &kp trans  &kp LSHFT  &SPACE    &mo 1  &mo 2  &trans
             >;
         };
 
