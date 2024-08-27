@@ -6,86 +6,6 @@
     combos {
         compatible = "zmk,combos";
 
-        copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <26 27>;
-        };
-
-        paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <27 28>;
-        };
-
-        cut {
-            bindings = <&kp LG(X)>;
-            key-positions = <26 28>;
-        };
-
-        undo {
-            bindings = <&kp LG(Z)>;
-            key-positions = <25 26>;
-        };
-
-        redo {
-            bindings = <&kp LG(LS(Z))>;
-            key-positions = <25 27>;
-        };
-
-        lh-gui {
-            bindings = <&kp LCTRL>;
-            key-positions = <13 14>;
-        };
-
-        lh-alt {
-            bindings = <&kp LGUI>;
-            key-positions = <15 16>;
-        };
-
-        lh-ctrl {
-            bindings = <&kp LALT>;
-            key-positions = <14 15>;
-        };
-
-        rh-gui {
-            bindings = <&kp LCTRL>;
-            key-positions = <21 22>;
-        };
-
-        rh-alt {
-            bindings = <&kp LGUI>;
-            key-positions = <19 20>;
-        };
-
-        rh-ctrl {
-            bindings = <&kp LALT>;
-            key-positions = <20 21>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <2 3>;
-        };
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <3 4>;
-        };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <9 10>;
-        };
-
-        del {
-            bindings = <&kp DEL>;
-            key-positions = <33 34>;
-        };
-
         at {
             bindings = <&kp AT_SIGN>;
             key-positions = <2 14>;
@@ -156,26 +76,6 @@
             key-positions = <21 33>;
         };
 
-        lpar_lt {
-            bindings = <&kp LPAR>;
-            key-positions = <7 8>;
-        };
-
-        rpar_gt {
-            bindings = <&kp RPAR>;
-            key-positions = <8 9>;
-        };
-
-        lbkt {
-            bindings = <&kp LBKT>;
-            key-positions = <31 32>;
-        };
-
-        rbkt {
-            bindings = <&kp RBKT>;
-            key-positions = <32 33>;
-        };
-
         bt3 {
             bindings = <&bt3>;
             key-positions = <17 29>;
@@ -188,10 +88,16 @@
             layers = <2>;
         };
 
-        soft_off {
+        soft_off_left {
             bindings = <&soft_off>;
-            key-positions = <16 17 5 4>;
-            layers = <2>;
+            key-positions = <2 14 26 4 16 28>;
+            layers = <0>;
+        };
+
+        soft_off_right {
+            bindings = <&soft_off>;
+            key-positions = <9 21 33 7 19 31>;
+            layers = <0>;
         };
     };
 
@@ -284,28 +190,28 @@
 
         base {
             bindings = <
-&trans  &kp B  &kp L  &kp D   &kp C       &kp V        &kp J  &kp F  &kp O      &kp U    &kp SEMI  &trans
-&trans  &kp N  &kp R  &kp T   &kp S       &kp G        &kp Y  &kp H  &kp A      &kp E    &kp I     &trans
-&trans  &kp X  &kp Q  &kp M   &kp W       &kp Z        &kp K  &kp P  &kp COMMA  &kp DOT  &kp SQT   &trans
-                      &trans  &kp LSHIFT  &kp SPACE    &mo 1  &mo 2  &trans
+&trans  &kp B  &kp L  &kp D      &kp C       &kp V        &kp J  &kp F     &kp O      &kp U    &kp SEMI  &trans
+&trans  &kp N  &kp R  &kp T      &kp S       &kp G        &kp Y  &kp H     &kp A      &kp E    &kp I     &trans
+&trans  &kp X  &kp Q  &kp M      &kp W       &kp Z        &kp K  &kp P     &kp COMMA  &kp DOT  &kp SQT   &trans
+                      &kp LCTRL  &kp LSHIFT  &kp SPACE    &mo 1  &kp LGUI  &kp LALT
             >;
         };
 
         num {
             bindings = <
-&trans  &none   &kp N7  &kp N8  &kp N9  &none     &none   &kp C_PP    &kp C_PREV    &kp C_NEXT    &kp C_BRI_UP  &trans
-&trans  &kp N0  &kp N4  &kp N5  &kp N6  &none     &none   &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT     &trans
-&trans  &none   &kp N1  &kp N2  &kp N3  &none     &none   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &trans
-                        &trans  &trans  &trans    &trans  &trans      &trans
+&trans  &kp GRAVE  &kp N7  &kp N8  &kp N9  &kp EQUAL    &kp C_VOL_UP  &kp ENTER  &kp TAB   &kp BACKSPACE  &kp ESC     &trans
+&trans  &kp N0     &kp N4  &kp N5  &kp N6  &kp MINUS    &kp C_PP      &kp LEFT   &kp DOWN  &kp UP         &kp RIGHT   &trans
+&trans  &kp FSLH   &kp N1  &kp N2  &kp N3  &kp BSLH     &kp C_VOL_DN  &kp LBKT   &kp RBKT  &kp C_PREV     &kp C_NEXT  &trans
+                           &trans  &trans  &mo 2        &trans        &trans     &trans
             >;
         };
 
         fun {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &bt2      &none   &kp GLOBE  &kp CAPS   &kp INS    &kp PSCRN  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &bt1      &none   &sk LCTRL  &sk LGUI   &sk LALT   &sk LSHFT  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &bt0      &none   &kp HOME   &kp PG_UP  &kp PG_DN  &kp END    &trans
-                         &trans  &trans  &trans    &trans  &trans     &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &bt2      &kp C_BRI_UP  &kp CAPS  &kp INS    &kp DEL    &kp PSCRN  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &bt1      &kp C_MUTE    &sk LGUI  &sk LALT   &sk LCTRL  &sk LSHFT  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &bt0      &kp C_BRI_DN  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &trans
+                         &trans  &trans  &trans    &trans        &trans    &trans
             >;
         };
     };
