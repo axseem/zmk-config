@@ -90,13 +90,13 @@
 
         soft_off_left {
             bindings = <&soft_off>;
-            key-positions = <2 14 26 4 16 28>;
+            key-positions = <27 2 4>;
             layers = <0>;
         };
 
         soft_off_right {
             bindings = <&soft_off>;
-            key-positions = <9 21 33 7 19 31>;
+            key-positions = <9 7 32>;
             layers = <0>;
         };
     };
