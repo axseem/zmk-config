@@ -6,76 +6,6 @@
     combos {
         compatible = "zmk,combos";
 
-        at {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <2 14>;
-        };
-
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <3 15>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        percent {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
-
-        caret {
-            bindings = <&kp CARET>;
-            key-positions = <6 18>;
-        };
-
-        plus {
-            bindings = <&kp KP_PLUS>;
-            key-positions = <7 19>;
-        };
-
-        astrk {
-            bindings = <&kp ASTRK>;
-            key-positions = <8 20>;
-        };
-
-        ampersand {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <9 21>;
-        };
-
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <14 26>;
-        };
-
-        backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <15 27>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <16 28>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <19 31>;
-        };
-
-        slash {
-            bindings = <&kp SLASH>;
-            key-positions = <20 32>;
-        };
-
-        excl {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <21 33>;
-        };
-
         bt3 {
             bindings = <&bt3>;
             key-positions = <17 29>;
@@ -86,18 +16,6 @@
             bindings = <&bt4>;
             key-positions = <5 17>;
             layers = <2>;
-        };
-
-        soft_off_left {
-            bindings = <&soft_off>;
-            key-positions = <27 2 4>;
-            layers = <0>;
-        };
-
-        soft_off_right {
-            bindings = <&soft_off>;
-            key-positions = <9 7 32>;
-            layers = <0>;
         };
     };
 
@@ -190,28 +108,37 @@
 
         base {
             bindings = <
-&trans  &kp B  &kp L  &kp D     &kp C       &kp V    &kp J      &kp F      &kp O      &kp U    &kp SEMI  &trans
-&trans  &kp N  &kp R  &kp T     &kp S       &kp G    &kp Y      &kp H      &kp A      &kp E    &kp I     &trans
-&trans  &kp X  &kp Q  &kp M     &kp W       &kp Z    &kp K      &kp P      &kp COMMA  &kp DOT  &kp SQT   &trans
-                      &kp LGUI  &kp LSHIFT  &mo 1    &kp SPACE  &kp LCTRL  &kp LALT
+&trans  &kp B  &kp L  &kp D      &kp C  &kp V        &kp J      &kp F  &kp O      &kp U    &kp SEMI  &trans
+&trans  &kp N  &kp R  &kp T      &kp S  &kp G        &kp Y      &kp H  &kp A      &kp E    &kp I     &trans
+&trans  &kp X  &kp Q  &kp M      &kp W  &kp Z        &kp K      &kp P  &kp COMMA  &kp DOT  &kp SQT   &trans
+                      &kp LCTRL  &mo 1  &kp SPACE    &kp LSHFT  &mo 2  &kp LGUI
             >;
         };
 
         num {
             bindings = <
-&trans  &kp ESC     &kp BACKSPACE  &kp TAB   &kp ENTER  &kp C_VOL_UP    &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp GRAVE  &trans
-&trans  &kp LEFT    &kp DOWN       &kp UP    &kp RIGHT  &kp C_PP        &kp MINUS  &kp N4  &kp N5  &kp N6  &kp N0     &trans
-&trans  &kp C_PREV  &kp C_NEXT     &kp LBKT  &kp RBKT   &kp C_VOL_DN    &kp BSLH   &kp N1  &kp N2  &kp N3  &kp FSLH   &trans
-                                   &trans    &trans     &trans          &mo 2      &trans  &trans
+&trans  &kp ESC     &kp BACKSPACE  &kp TAB    &kp ENTER  &kp C_VOL_UP    &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp BACKSLASH  &trans
+&trans  &kp LALT    &kp LGUI       &kp LCTRL  &kp LSHFT  &kp C_PP        &kp MINUS  &kp N4  &kp N5  &kp N6  &kp N0         &trans
+&trans  &kp C_PREV  &kp C_NEXT     &kp LBKT   &kp RBKT   &kp C_VOL_DN    &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp FSLH       &trans
+                                   &trans     &trans     &trans          &trans     &mo 3   &trans
+            >;
+        };
+
+        sym {
+            bindings = <
+&trans  &kp INS   &kp DEL   &kp CAPS  &kp LS(ENTER)  &kp C_BRI_UP    &kp PLUS   &kp AMPS  &kp STAR   &kp LPAR   &kp PIPE   &trans
+&trans  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT      &kp C_MUTE      &kp UNDER  &kp DLLR  &kp PRCNT  &kp CARET  &kp RPAR   &trans
+&trans  &kp END   &kp HOME  &kp LBRC  &kp RBRC       &kp C_BRI_DN    &kp TILDE  &kp EXCL  &kp AT     &kp HASH   &kp QMARK  &trans
+                            &trans    &none          &trans          &trans     &trans    &trans
             >;
         };
 
         fun {
             bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &bt2      &kp C_BRI_UP  &kp CAPS  &kp INS    &kp DEL    &kp PSCRN  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &bt1      &kp C_MUTE    &sk LGUI  &sk LALT   &sk LCTRL  &sk LSHFT  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &bt0      &kp C_BRI_DN  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &trans
-                         &trans  &trans  &trans    &trans        &trans    &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &bt2      &kp C_BRI_UP  &kp F13    &kp F14    &kp F15    &kp F16          &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &bt1      &kp C_MUTE    &sk LSHFT  &sk LCTRL  &sk LGUI   &sk LALT         &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &bt0      &kp C_BRI_DN  &soft_off  &kp PG_DN  &kp PG_UP  &kp PRINTSCREEN  &trans
+                         &trans   &trans   &trans    &trans        &trans     &trans
             >;
         };
     };
